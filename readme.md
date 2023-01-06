@@ -24,17 +24,19 @@
     aws_secret_access_key = <Get from IAM>
 
     aws ec2 create-key-pair --key-name sam-lab1 --profile=lab1 --region=us-east-1 --query 'KeyMaterial' --output text > ~/Downloads/sam-lab1.pem
+    chmod 700 ~/Downloads/sam-lab1.pem
 
     cd terraform
     terraform init
     terraform plan
     terraform apply
 
+
     Go to Edit Inbound rules and add a rule
     It can be automated by using this, but I think this documentation has a mistake
     https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.create-cluster.cli.configure-inbound-rules.html
 
-    ssh -i key.pem <Public IP>
+   ssh -i ~/Downloads/sam-lab1.pem ec2-user@34.230.37.250
 
     Run the script, this could have been ansible / user data - but wanted to go through it line by line
 
