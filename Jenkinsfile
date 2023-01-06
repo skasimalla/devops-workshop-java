@@ -20,6 +20,12 @@ pipeline {
 
                 //Get it from some git tag/ or some other dynamic mechanism
                 sh (returnStdout: true, script: '''
+
+                mkdir -p build
+                cd build
+
+                git clone https://github.com/spring-projects/spring-petclinic
+                
                 version=$(git describe --tags `git rev-list --tags --max-count=1`)
                 echo $version
                
