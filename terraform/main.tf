@@ -27,3 +27,8 @@ resource "aws_instance" "web" {
 
 }
 
+
+output "web" {
+  value = ["${aws_instance.main.*.public_ip}"]
+}
+
