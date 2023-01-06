@@ -36,7 +36,7 @@
     It can be automated by using this, but I think this documentation has a mistake
     https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.create-cluster.cli.configure-inbound-rules.html
 
-   ssh -i ~/Downloads/sam-lab1.pem ec2-user@34.230.37.250
+    ssh -i ~/Downloads/sam-lab1.pem ec2-user@<public-ip> #Don't do this in PROD or in work env
 
     Run the script, this could have been ansible / user data - but wanted to go through it line by line
 
