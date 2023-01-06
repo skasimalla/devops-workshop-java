@@ -20,3 +20,4 @@ _site/
 .terraform/*
 */.terraform
 .terraform
+.DS_Store
