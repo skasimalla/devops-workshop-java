@@ -32,7 +32,10 @@
     terraform apply
 
 
-    Go to Edit Inbound rules and add a rule
+    Go to Security groups tabl on the page
+       1.> Edit Inbound rules and add a rule
+       2.> Edit outbound rules and add a rule- else it cannot connect to yum/ other repos
+    
     It can be automated by using this, but I think this documentation has a mistake
     https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.create-cluster.cli.configure-inbound-rules.html
 
